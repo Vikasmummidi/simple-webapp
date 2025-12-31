@@ -1,15 +1,14 @@
 package com.example;
 
-import java.io.*;
 import javax.servlet.http.HttpServlet;
-import jakarta.servlet.annotation.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
-@WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("<h2>Deployed via Jenkins CI/CD!</h2>");
+        response.getWriter().println("Hello from javax servlet running on Tomcat 9!");
     }
 }
