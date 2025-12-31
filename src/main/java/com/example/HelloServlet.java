@@ -1,7 +1,7 @@
 package com.example;
 
 import java.io.*;
-import jakarta.servlet.http.*;
+import javax.servlet.http.HttpServlet;
 import jakarta.servlet.annotation.*;
 
 @WebServlet("/hello")
